@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Styles overriding or adding to Tailwind */
+
+/* Smooth scrolling applied at HTML level in Tailwind, but adding scroll-behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Nav Link Hover Effect (Gold underline expanding from center) */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background-color: #D4AF37; /* Gold */
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Header Sticky Classes */
+.header-scrolled {
+    background-color: rgba(18, 18, 18, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-bottom-color: rgba(212, 175, 55, 0.3) !important; /* Gold line */
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+}
+
+.header-scrolled .logo-container {
+    height: 3rem; /* Scales down logo on scroll */
+}
+
+@media (min-width: 768px) {
+    .header-scrolled .logo-container {
+        height: 4rem;
+    }
+}
+
+/* Hero Zoom Animation */
+@keyframes slowZoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.08); }
+}
+
+.animate-slow-zoom {
+    animation: slowZoom 20s ease-in-out infinite alternate;
+}
+
+/* Initial state for Scroll Reveal */
+.gs-reveal {
+    opacity: 0;
+    visibility: hidden;
+}
