@@ -179,6 +179,80 @@
                 <div class="swiper-button-prev"></div>
             </div>
         </div>
+
+        <!-- Título de Bodas -->
+        <div class="container mx-auto px-6 max-w-6xl text-center mb-16 gs-reveal" style="margin-top: 8rem;">
+            <h2 class="text-4xl md:text-5xl font-serif text-gold mb-6">Bodas Inolvidables</h2>
+            <div class="w-px h-16 bg-gold mx-auto mb-6"></div>
+            <p class="text-lg text-light font-light max-w-2xl mx-auto opacity-80">El escenario perfecto para el día más importante de tu vida.</p>
+        </div>
+
+        <!-- Swiper Carousel Bodas -->
+        <div class="w-full relative gs-reveal delay-200">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="relative group overflow-hidden h-[60vh] md:h-[80vh] rounded-lg mx-2 md:mx-4">
+                            <img src="assets/bodadia.jpg" alt="Boda de Día" loading="lazy"
+                                class="w-full h-full object-cover filter brightness-[0.7] group-hover:scale-105 group-hover:brightness-100 transition-all duration-700">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent opacity-90">
+                            </div>
+                            <div class="absolute bottom-8 left-8">
+                                <h3 class="text-2xl font-serif text-gold mb-1">Boda</h3>
+                                <p class="text-light font-light opacity-80 uppercase tracking-widest text-xs">De dia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="relative group overflow-hidden h-[60vh] md:h-[80vh] rounded-lg mx-2 md:mx-4">
+                            <img src="assets/bodanoche.jpg" alt="Boda de Noche" loading="lazy"
+                                class="w-full h-full object-cover filter brightness-[0.7] group-hover:scale-105 group-hover:brightness-100 transition-all duration-700">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent opacity-90">
+                            </div>
+                            <div class="absolute bottom-8 left-8">
+                                <h3 class="text-2xl font-serif text-gold mb-1">Boda</h3>
+                                <p class="text-light font-light opacity-80 uppercase tracking-widest text-xs">De noche</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="relative group overflow-hidden h-[60vh] md:h-[80vh] rounded-lg mx-2 md:mx-4">
+                            <img src="assets/bodadia.jpg" alt="Boda de Día" loading="lazy"
+                                class="w-full h-full object-cover filter brightness-[0.7] group-hover:scale-105 group-hover:brightness-100 transition-all duration-700">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent opacity-90">
+                            </div>
+                            <div class="absolute bottom-8 left-8">
+                                <h3 class="text-2xl font-serif text-gold mb-1">Boda</h3>
+                                <p class="text-light font-light opacity-80 uppercase tracking-widest text-xs">De dia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide">
+                        <div class="relative group overflow-hidden h-[60vh] md:h-[80vh] rounded-lg mx-2 md:mx-4">
+                            <img src="assets/bodanoche.jpg" alt="Boda de Noche" loading="lazy"
+                                class="w-full h-full object-cover filter brightness-[0.7] group-hover:scale-105 group-hover:brightness-100 transition-all duration-700">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent opacity-90">
+                            </div>
+                            <div class="absolute bottom-8 left-8">
+                                <h3 class="text-2xl font-serif text-gold mb-1">Boda</h3>
+                                <p class="text-light font-light opacity-80 uppercase tracking-widest text-xs">De noche</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Navigation buttons -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
     </section>
 
     <!-- Footer / Contacto -->
@@ -222,28 +296,35 @@
     <script src="script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Initialize Swiper with larger images and click-to-change (navigation)
-            const swiper = new Swiper('.mySwiper', {
-                slidesPerView: 1,
-                spaceBetween: 10,
-                centeredSlides: true,
-                loop: true,
-                speed: 600,
-                allowTouchMove: true,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                breakpoints: {
-                    768: {
-                        slidesPerView: 1.1,
-                        spaceBetween: 30,
+            // Initialize multiple Swiper instances
+            const swipers = document.querySelectorAll('.mySwiper');
+            
+            swipers.forEach(function(swiperEl) {
+                const nextBtn = swiperEl.querySelector('.swiper-button-next');
+                const prevBtn = swiperEl.querySelector('.swiper-button-prev');
+                
+                new Swiper(swiperEl, {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                    centeredSlides: true,
+                    loop: true,
+                    speed: 600,
+                    allowTouchMove: true,
+                    navigation: {
+                        nextEl: nextBtn,
+                        prevEl: prevBtn,
                     },
-                    1024: {
-                        slidesPerView: 1.2,
-                        spaceBetween: 40,
-                    },
-                }
+                    breakpoints: {
+                        768: {
+                            slidesPerView: 1.1,
+                            spaceBetween: 30,
+                        },
+                        1024: {
+                            slidesPerView: 1.2,
+                            spaceBetween: 40,
+                        },
+                    }
+                });
             });
         });
     </script>
