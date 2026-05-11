@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     // 1. Sticky Header Logic
     const header = document.getElementById("main-header");
-    
+
     window.addEventListener("scroll", () => {
         if (window.scrollY > 50) {
             header.classList.add("header-scrolled");
@@ -16,26 +16,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const revealElements = document.querySelectorAll(".gs-reveal");
 
     revealElements.forEach((element) => {
-        // Find if it has a delay class (delay-100, delay-200, etc.)
         let delay = 0;
-        if (element.classList.contains("delay-100")) delay = 0.1;
-        if (element.classList.contains("delay-200")) delay = 0.2;
-        if (element.classList.contains("delay-300")) delay = 0.3;
+        if (element.classList.contains("delay-100")) delay = 0.05;
+        if (element.classList.contains("delay-200")) delay = 0.1;
+        if (element.classList.contains("delay-300")) delay = 0.15;
 
-        gsap.fromTo(element, 
+        gsap.fromTo(element,
             {
-                y: 50,
-                autoAlpha: 0 // handles both opacity and visibility
+                y: 40,
+                autoAlpha: 0
             },
             {
-                duration: 1,
+                duration: 0.5, // Más rápido
                 y: 0,
                 autoAlpha: 1,
-                ease: "power3.out",
+                ease: "power2.out",
                 delay: delay,
                 scrollTrigger: {
                     trigger: element,
-                    start: "top 85%", // Starts animation when the top of element hits 85% of viewport
+                    start: "top 95%", // Se dispara antes de que entre completamente
                     toggleActions: "play none none reverse"
                 }
             }
