@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galería de Eventos | La Cabaña</title>
     <meta name="description" content="Galería de eventos y espacios en La Cabaña.">
-    
+
     <!-- Etiquetas Open Graph para compartir en redes sociales (GitHub Pages) -->
     <meta property="og:title" content="Galería de Eventos | La Cabaña">
-    <meta property="og:description" content="Explora la magia de las celebraciones en La Cabaña y descubre nuestros espacios.">
+    <meta property="og:description"
+        content="Explora la magia de las celebraciones en La Cabaña y descubre nuestros espacios.">
     <meta property="og:image" content="assets/bodadia.jpg">
     <meta property="og:type" content="website">
     <!-- Google Fonts -->
@@ -184,7 +185,8 @@
         <div class="container mx-auto px-6 max-w-6xl text-center mb-16 gs-reveal" style="margin-top: 8rem;">
             <h2 class="text-4xl md:text-5xl font-serif text-gold mb-6">Bodas Inolvidables</h2>
             <div class="w-px h-16 bg-gold mx-auto mb-6"></div>
-            <p class="text-lg text-light font-light max-w-2xl mx-auto opacity-80">El escenario perfecto para el día más importante de tu vida.</p>
+            <p class="text-lg text-light font-light max-w-2xl mx-auto opacity-80">El escenario perfecto para el día más
+                importante de tu vida.</p>
         </div>
 
         <!-- Swiper Carousel Bodas -->
@@ -215,7 +217,8 @@
                             </div>
                             <div class="absolute bottom-8 left-8">
                                 <h3 class="text-2xl font-serif text-gold mb-1">Boda</h3>
-                                <p class="text-light font-light opacity-80 uppercase tracking-widest text-xs">De noche</p>
+                                <p class="text-light font-light opacity-80 uppercase tracking-widest text-xs">De noche
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -243,7 +246,8 @@
                             </div>
                             <div class="absolute bottom-8 left-8">
                                 <h3 class="text-2xl font-serif text-gold mb-1">Boda</h3>
-                                <p class="text-light font-light opacity-80 uppercase tracking-widest text-xs">De noche</p>
+                                <p class="text-light font-light opacity-80 uppercase tracking-widest text-xs">De noche
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -263,21 +267,21 @@
                     <h2 class="text-4xl font-serif text-gold mb-6">Reserva tu Evento</h2>
                     <p class="text-light font-light opacity-70 mb-8 max-w-md">Contáctanos para conocer nuestros paquetes
                         exclusivos y agendar un recorrido por nuestras instalaciones.</p>
-                    <a href="https://wa.me/521234567890" target="_blank" rel="noopener noreferrer"
+                    <a href="https://wa.me/523313641496" target="_blank" rel="noopener noreferrer"
                         class="inline-flex items-center space-x-3 text-gold hover:text-light transition-colors group">
                         <i class="fa-brands fa-whatsapp text-2xl group-hover:scale-110 transition-transform"></i>
-                        <span class="text-lg tracking-wider">+52 123 456 7890</span>
+                        <span class="text-lg tracking-wider">+52 33 1364 1496</span>
                     </a>
                 </div>
                 <div class="md:text-right">
                     <h3 class="text-xl font-serif text-gold mb-6 uppercase tracking-widest">Síguenos</h3>
                     <div class="flex space-x-6 md:justify-end">
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="text-light hover:text-gold transition-colors text-xl"><i
+                        <a href="https://www.instagram.com/lacabanajardin/" target="_blank" rel="noopener noreferrer"
+                            class="text-light hover:text-gold transition-colors text-xl"><i
                                 class="fa-brands fa-instagram"></i></a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="text-light hover:text-gold transition-colors text-xl"><i
+                        <a href="https://www.facebook.com/profile.php?id=100063791400824" target="_blank"
+                            rel="noopener noreferrer" class="text-light hover:text-gold transition-colors text-xl"><i
                                 class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="text-light hover:text-gold transition-colors text-xl"><i
-                                class="fa-brands fa-pinterest"></i></a>
                     </div>
                 </div>
             </div>
@@ -298,11 +302,11 @@
         document.addEventListener('DOMContentLoaded', function () {
             // Initialize multiple Swiper instances
             const swipers = document.querySelectorAll('.mySwiper');
-            
-            swipers.forEach(function(swiperEl) {
+
+            swipers.forEach(function (swiperEl) {
                 const nextBtn = swiperEl.querySelector('.swiper-button-next');
                 const prevBtn = swiperEl.querySelector('.swiper-button-prev');
-                
+
                 new Swiper(swiperEl, {
                     slidesPerView: 1,
                     spaceBetween: 10,
